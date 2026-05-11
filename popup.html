@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>nSanity Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>nRildo Settings</h2>
+
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="enableToggle" checked>
+                <span class="slider round"></span>
+            </label>
+            <span id="statusText">Enabled</span>
+        </div>
+
+        <div class="gradual-section">
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="gradualToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="gradualText">Gradual Mode (1% -> 100%)</span>
+            </div>
+            <div id="gradualSettings" style="display: none; text-align: center; margin-bottom: 15px;">
+                <label for="gradualHours" style="font-size: 14px;">Hours to 100%:</label>
+                <input type="number" id="gradualHours" value="8" min="0.1" step="0.1"
+                    style="width: 60px; background: #0f3460; color: white; border: 1px solid #16213e; border-radius: 4px; padding: 4px;">
+                <button id="resetTimerBtn"
+                    style="padding: 5px 10px; font-size: 12px; margin-left: 5px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">Reset
+                    Timer</button>
+            </div>
+        </div>
+
+        <div class="images-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                <h3 style="margin: 0;">Image URLs</h3>
+                <div class="toggle-container" style="margin: 0; transform: scale(0.7); transform-origin: right;">
+                    <span style="font-size: 16px; color: #a2a2d0;">Preview</span>
+                    <label class="switch">
+                        <input type="checkbox" id="previewToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <textarea id="imageUrls" rows="5" placeholder="Enter image URLs, one per line"></textarea>
+            <div id="imagePreviewContainer"
+                style="display: none; height: 86px; overflow-y: auto; background: #0f3460; border: 1px solid #16213e; border-radius: 5px; padding: 5px; gap: 5px; align-content: start; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));">
+            </div>
+            <button id="saveBtn">Save Settings</button>
+            <button id="resetBtn">Reset to Default</button>
+        </div>
+
+        <p class="status-msg" id="statusMsg"></p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 300px;
+    margin: 0;
+    padding: 15px;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #e94560;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #a2a2d0;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#statusText {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #e94560;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #e94560;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.images-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    background: #0f3460;
+    color: white;
+    border: 1px solid #16213e;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #d13d56;
+}
+
+#resetBtn {
+    background-color: #333;
+}
+
+#resetBtn:hover {
+    background-color: #444;
+}
+
+.status-msg {
+    margin: 0;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 14px;
+    min-height: 20px;
+}

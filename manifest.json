@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "nSanity",
+  "version": "1.0",
+  "description": "Replaces all images on web pages with a custom set of images.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "nSanity Settings"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["nsanity.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
