@@ -1,6 +1,6 @@
 const defaultImages = [
-  "https://i.scdn.co/image/ab67616d0000b273bc3199856f3a6eabc0fdf9d9",
-  "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/44ea7aac5aaa2959cbb296d10989eff51000x820x1_6.png"
+  "https://media.istockphoto.com/id/1973365581/vector/sample-ink-rubber-stamp.jpg?s=612x612&w=0&k=20&c=_m6hNbFtLdulg3LK5LRjJiH6boCb_gcxPvRLytIz0Ws=",
+  "https://t4.ftcdn.net/jpg/01/43/42/83/360_F_143428338_gcxw3Jcd0tJpkvvb53pfEztwtU9sxsgT.jpg"
 ];
 
 let isEnabled = true;
